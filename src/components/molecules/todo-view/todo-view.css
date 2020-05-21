@@ -76,4 +76,5 @@ h1 {
   width: 80%;
   border: 1px solid;
   text-indent: 10px;
+  overflow: auto;
 }

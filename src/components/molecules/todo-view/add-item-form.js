@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Button from '../../atoms/button';
 
 const AddItemForm = props => {
@@ -30,5 +31,15 @@ const AddItemForm = props => {
     </form>
   );
 };
+
+AddItemForm.propTypes = {
+  onClose: PropTypes.func,
+  onSave: PropTypes.func,
+}
+
+AddItemForm.defaultProps = {
+  onClose: () => {},
+  onSave: () => {},
+}
 
 export default AddItemForm;
