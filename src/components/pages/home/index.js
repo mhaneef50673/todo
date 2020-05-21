@@ -1,8 +1,11 @@
 import React from 'react';
+import Todo from '../../organisms/todo';
 
 const Home = () => {
   return (
-    <h1> this is home page</h1>
+    <React.Fragment>
+      <Todo />
+    </React.Fragment>
   );
 };
 

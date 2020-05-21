@@ -1,0 +1,25 @@
+h1 {
+  padding-left: 10px;
+}
+
+.todo-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.add-item {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

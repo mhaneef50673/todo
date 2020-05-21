@@ -1,0 +1,22 @@
+.todo-item {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.pending {
+  background-color: lightsalmon;
+}
+
+.completed {
+  background-color: darkseagreen
+}
+
+.text {
+  padding-bottom: 10px;
+}
