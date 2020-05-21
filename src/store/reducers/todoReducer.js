@@ -3,11 +3,11 @@ import { ADD_ITEM, PENDING, COMPLETED, TOGGLE_ITEM } from '../../constants';
 const initialState = {
   todos: [
     {
-      description: 'item 1',
+      name: 'item 1',
       status: 'completed',
     },
     {
-      description: 'item 2',
+      name: 'item 2',
       status: 'completed',
     }
   ],
@@ -20,7 +20,7 @@ const todoReducer = (state, action) => {
         todos: [
           ...state.todos,
           {
-            text: action.text,
+            name: action.payload.itemName,
             status: PENDING,
           }
         ],
@@ -28,7 +28,7 @@ const todoReducer = (state, action) => {
     case TOGGLE_ITEM:
       return Object.assign({}, state, {
         todos: state.todos.map((todo, index) => {
-          if (index === action.index) {
+          if (index === action.payload.index) {
             return Object.assign({}, todo, {
               status: todo.status === PENDING ? COMPLETED : PENDING,
             });

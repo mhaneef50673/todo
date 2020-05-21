@@ -8,21 +8,27 @@ import './todo-item.css';
 
 const BLOCK_NAME = 'todo-item';
 
-const TodoItem = ({description, status}) => {
+const TodoItem = ({name, status, index, onTodoItemClickHandler}) => {
+  const clickHandler = () => {
+    onTodoItemClickHandler(index);
+  };
+
   return(
-    <div className={`${BLOCK_NAME} ${status}`}>
-      <span className="text">{description}</span>
+    <div className={`${BLOCK_NAME} ${status}`} onClick={clickHandler}>
+      <span className="text">{name}</span>
       <span className="text">{status}</span>
     </div>
   );
 };
 
 TodoItem.propTypes = {
-  description: PropTypes.string,
+  name: PropTypes.string,
   status: PropTypes.oneOf([
     PENDING,
     COMPLETED,
-  ])
+  ]),
+  index: PropTypes.number,
+  onTodoItemClickHandler: PropTypes.func,
 };
 
 export default memo(TodoItem);

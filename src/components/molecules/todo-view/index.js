@@ -1,23 +1,51 @@
 import React from 'react';
+import AddItemForm from './add-item-form';
 import TodoItem from '../../atoms/todo-item';
 import Button from '../../atoms/button';
+import Modal from '../../atoms/modal';
 import './todo-view.css';
 
 class TodoView extends React.Component {
 
+  state = {
+    showModal: false,
+  }
+
   addItemHandler = () => {
-    alert('clicked');
+    this.setState({
+      showModal: true,
+    })
+  }
+
+  onSave = itemName => {
+    this.props.addTodoItem(itemName);
+    this.setState({
+      showModal: false,
+    });
+  }
+
+  modalCloseHandler = () => {
+    this.setState({
+      showModal: false,
+    });
   }
 
   render() {
-    const { list } = this.props;
+    const { list, onTodoItemClickHandler } = this.props;
+    const { showModal } = this.state;
     return (
       <React.Fragment>
         <h1> Todo List </h1>
         <div className="todo-view">
           {
-            list.map(todo => (
-              <TodoItem key={todo.description} description={todo.description} status={todo.status} />
+            list.map((todo, index) => (
+              <TodoItem
+                key={index}
+                index={index}
+                name={todo.name}
+                status={todo.status}
+                onTodoItemClickHandler={onTodoItemClickHandler}
+              />
             ))
           }
         </div>
@@ -25,6 +53,14 @@ class TodoView extends React.Component {
           <div className="center">
             <Button buttonText="Add Item" clickHandler={this.addItemHandler} />
           </div>
+        </div>
+        <div className="modal-container">
+          <Modal
+            title="Enter item Details"
+            isVisible={showModal}
+          >
+            <AddItemForm onClose={this.modalCloseHandler} onSave={this.onSave} />
+          </Modal>
         </div>
       </React.Fragment>
     )
