@@ -110,3 +110,18 @@
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
+.error {
+  margin-left: 5px;
+  color: red;
+}
+
+.fa-spinner {
+  top: 32% !important;
+  animation: spin 0.6s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}

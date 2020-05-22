@@ -6,7 +6,7 @@ export default class LOgin extends React.Component {
   render() {
     return (
       <div className="login-container">
-        <LoginForm />
+        <LoginForm {...this.props} />
       </div>
     );
   }

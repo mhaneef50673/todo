@@ -1,9 +1,9 @@
 import React from 'react';
 import Login from '../../organisms/login';
 
-const LoginPage = () => {
+const LoginPage = props => {
   return (
-    <Login />
+    <Login {...props} />
   );
 };
 
