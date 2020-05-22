@@ -1,10 +1,10 @@
 import React from 'react';
 import Todo from '../../organisms/todo';
 
-const Home = () => {
+const Home = props => {
   return (
     <React.Fragment>
-      <Todo />
+      <Todo {...props}/>
     </React.Fragment>
   );
 };

@@ -8,22 +8,19 @@ export default class LoginForm extends React.Component {
   state = {
     userid: 'eve.holt@reqres.in',
     password: 'cityslicka',
-    isAuthenticating: false,
-    isError: false,
   }
 
   onSubmit = event => {
-    this.setState({
-      isAuthenticating: true,
-    })
     const {
       userid,
       password,
     } = this.state;
-    const { history } = this.props;
+    const { login, history } = this.props;
     event.preventDefault();
 
-    const requestOptions = {
+    login(userid, password, history);
+
+    /*const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: userid, password })
@@ -41,7 +38,7 @@ export default class LoginForm extends React.Component {
           isError: true,
         })
       }
-    })
+    })*/
   }
 
   onInputChange = (e, inputName) => {
@@ -54,16 +51,19 @@ export default class LoginForm extends React.Component {
     const {
       userid,
       password,
-      isError,
-      isAuthenticating,
     } = this.state;
+    const {
+      error,
+      isAuthenticating,
+    } = this.props;
+
     return (
       <div className="login-form">
         <form onSubmit={this.onSubmit}>
           <div className="input-field-group">
             <div className="input-container">
               {
-                isError && (
+                error && (
                   <div className="error">
                     <span>Invalid username/password</span>
                   </div>
