@@ -1,9 +1,10 @@
 import React from 'react';
+import Login from '../../organisms/login';
 
-const Login = () => {
+const LoginPage = () => {
   return (
-    <h1> this is login page</h1>
+    <Login />
   );
 };
 
-export default Login;
+export default LoginPage;
