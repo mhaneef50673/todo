@@ -1,5 +1,10 @@
 # Todo App
 
+## Demo public Heroku Url
+
+This project has been deployed in heroku cloud.
+
+Click on this [link](https://haneef-todo.herokuapp.com/) to access the project in heroku cloud. 
 
 ## Project Structure
 
@@ -19,7 +24,7 @@ This project is using [Reqres](https://reqres.in/api/login) api for login. Pleas
     Google Chrome
     Mozilla firefox
 
-## How to run this project
+## How to run this project locally
 
 In the project directory, you can run:
 
