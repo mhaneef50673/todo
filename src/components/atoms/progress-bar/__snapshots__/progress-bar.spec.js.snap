@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar Component should render the component 1`] = `
+<ProgressBar
+  percentage={10}
+>
+  <div
+    className="progress-bar"
+  >
+    <div
+      className="filler"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+    <div
+      className="loadingText"
+    >
+      <span>
+        Loading...
+      </span>
+    </div>
+  </div>
+</ProgressBar>
+`;

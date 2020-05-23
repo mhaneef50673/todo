@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Animated Image Component should render the component 1`] = `
+<AnimatedImage
+  extraClass="extraClass"
+  imageUrl="testUrl"
+  shouldUseRippleEffect={true}
+  showRippleEffect={true}
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="animated"
+      className="extraClass"
+      src="testUrl"
+    />
+    <span
+      className="ripple rippleEffect"
+    />
+  </div>
+</AnimatedImage>
+`;

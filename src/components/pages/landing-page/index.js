@@ -1,10 +1,10 @@
 import React from 'react';
-import Landing from '../../organisms/landing';
+import LandingView from '../../organisms/landing-view';
 
 const LandingPage = props => {
   return (
     <React.Fragment>
-      <Landing {...props} />
+      <LandingView {...props} />
     </React.Fragment>
   );
 };

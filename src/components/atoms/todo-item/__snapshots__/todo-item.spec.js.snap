@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem Component should render the component 1`] = `
+<Memo(TodoItem)
+  index={0}
+  name="Item 1"
+  onTodoItemClickHandler={[MockFunction]}
+  status="PENDING"
+>
+  <div
+    className="todo-item PENDING"
+    onClick={[Function]}
+  >
+    <span
+      className="text"
+    >
+      Item 1
+    </span>
+    <span
+      className="text"
+    >
+      PENDING
+    </span>
+  </div>
+</Memo(TodoItem)>
+`;
+
+exports[`TodoItem Component should render the component 2`] = `
+<Memo(TodoItem)
+  index={0}
+  name="Item 1"
+  onTodoItemClickHandler={[MockFunction]}
+  status="COMPLETED"
+>
+  <div
+    className="todo-item COMPLETED"
+    onClick={[Function]}
+  >
+    <span
+      className="text"
+    >
+      Item 1
+    </span>
+    <span
+      className="text"
+    >
+      COMPLETED
+    </span>
+  </div>
+</Memo(TodoItem)>
+`;

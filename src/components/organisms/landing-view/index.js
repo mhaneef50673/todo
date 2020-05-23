@@ -1,8 +1,8 @@
 import React from 'react';
 import LoaderView from '../../molecules/loader';
-import './landing.css';
+import './landing-view.css';
 
-export default class Landing extends React.Component {
+export default class LandingView extends React.Component {
 
   render () {
     return (

@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AddItemForm from './add-item-form';
 import TodoItem from '../../atoms/todo-item';
 import Button from '../../atoms/button';
 import Modal from '../../atoms/modal';
 import './todo-view.css';
+import { PENDING, COMPLETED } from '../../../constants';
 
 class TodoView extends React.Component {
 
@@ -65,6 +67,17 @@ class TodoView extends React.Component {
       </React.Fragment>
     )
   }
+}
+
+TodoView.propTypes = {
+  onTodoItemClickHandler: PropTypes.func,
+  list: PropTypes.arrayOf(PropTypes.shape({
+    description: PropTypes.string,
+    status: PropTypes.oneOf([
+      PENDING,
+      COMPLETED
+    ])
+  })),
 }
 
 export default TodoView;

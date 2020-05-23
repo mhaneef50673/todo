@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoaderView Component should render the component 1`] = `
+<LoaderView>
+  <div>
+    <div
+      className="app-logo-container"
+    >
+      <AnimatedImage
+        extraClass="app-logo"
+        imageUrl="app_logo.png"
+        shouldUseRippleEffect={true}
+        showRippleEffect={false}
+      >
+        <div
+          className="image-container"
+        >
+          <img
+            alt="animated"
+            className="app-logo"
+            src="app_logo.png"
+          />
+          <span
+            className="ripple false"
+          />
+        </div>
+      </AnimatedImage>
+    </div>
+    <div
+      className="progress-bar-container"
+    >
+      <ProgressBar
+        percentage={0}
+      >
+        <div
+          className="progress-bar"
+        >
+          <div
+            className="filler"
+            style={
+              Object {
+                "width": "0%",
+              }
+            }
+          />
+        </div>
+      </ProgressBar>
+    </div>
+  </div>
+</LoaderView>
+`;

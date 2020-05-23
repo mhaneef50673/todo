@@ -21,7 +21,14 @@ export default class Modal extends React.Component {
     );
   }
 }
+
 Modal.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   title: PropTypes.string,
 };
+
+Modal.defaultProps = {
+  isVisible: false,
+  title: '',
+  children: React.createElement('div'),
+}

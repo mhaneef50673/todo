@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoView Component should render the component 1`] = `
+<TodoView
+  list={
+    Array [
+      Object {
+        "description": "item 1",
+        "status": "pending",
+      },
+      Object {
+        "description": "item 2",
+        "status": "completed",
+      },
+    ]
+  }
+  onTodoItemClickHandler={[MockFunction]}
+>
+  <h1>
+     Todo List 
+  </h1>
+  <div
+    className="todo-view"
+  >
+    <Memo(TodoItem)
+      index={0}
+      key="0"
+      onTodoItemClickHandler={[MockFunction]}
+      status="pending"
+    >
+      <div
+        className="todo-item pending"
+        onClick={[Function]}
+      >
+        <span
+          className="text"
+        />
+        <span
+          className="text"
+        >
+          pending
+        </span>
+      </div>
+    </Memo(TodoItem)>
+    <Memo(TodoItem)
+      index={1}
+      key="1"
+      onTodoItemClickHandler={[MockFunction]}
+      status="completed"
+    >
+      <div
+        className="todo-item completed"
+        onClick={[Function]}
+      >
+        <span
+          className="text"
+        />
+        <span
+          className="text"
+        >
+          completed
+        </span>
+      </div>
+    </Memo(TodoItem)>
+  </div>
+  <div
+    className="add-item"
+  >
+    <div
+      className="center"
+    >
+      <Button
+        action={[Function]}
+        buttonText="Add Item"
+        clickHandler={[Function]}
+        extraClass="primary"
+      >
+        <button
+          className="primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Add Item
+        </button>
+      </Button>
+    </div>
+  </div>
+  <div
+    className="modal-container"
+  >
+    <Modal
+      isVisible={false}
+      title="Enter item Details"
+    />
+  </div>
+</TodoView>
+`;

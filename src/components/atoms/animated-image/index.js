@@ -7,7 +7,7 @@ const AnimatedImage = props => {
 
   return (
     <div className="image-container">
-      <img src={props.imageUrl} className={props.extraClass} />
+      <img alt="animated" src={props.imageUrl} className={props.extraClass} />
       <span className={`ripple ${props.showRippleEffect && 'rippleEffect'}`} />
     </div>
   )

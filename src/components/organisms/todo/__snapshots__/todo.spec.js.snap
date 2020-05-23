@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo Component should render the component 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Todo)>
+    <Todo
+      addTodoItem={[Function]}
+      logout={[Function]}
+      todos={
+        Array [
+          Object {
+            "description": "item 1",
+            "status": "pending",
+          },
+        ]
+      }
+      toggleTodoStatus={[Function]}
+      token="test"
+    >
+      <Button
+        action={[Function]}
+        buttonText="logout"
+        clickHandler={[Function]}
+        extraClass="primary"
+      >
+        <button
+          className="primary"
+          onClick={[Function]}
+          type="button"
+        >
+          logout
+        </button>
+      </Button>
+      <TodoView
+        addTodoItem={[Function]}
+        list={
+          Array [
+            Object {
+              "description": "item 1",
+              "status": "pending",
+            },
+          ]
+        }
+        onTodoItemClickHandler={[Function]}
+      >
+        <h1>
+           Todo List 
+        </h1>
+        <div
+          className="todo-view"
+        >
+          <Memo(TodoItem)
+            index={0}
+            key="0"
+            onTodoItemClickHandler={[Function]}
+            status="pending"
+          >
+            <div
+              className="todo-item pending"
+              onClick={[Function]}
+            >
+              <span
+                className="text"
+              />
+              <span
+                className="text"
+              >
+                pending
+              </span>
+            </div>
+          </Memo(TodoItem)>
+        </div>
+        <div
+          className="add-item"
+        >
+          <div
+            className="center"
+          >
+            <Button
+              action={[Function]}
+              buttonText="Add Item"
+              clickHandler={[Function]}
+              extraClass="primary"
+            >
+              <button
+                className="primary"
+                onClick={[Function]}
+                type="button"
+              >
+                Add Item
+              </button>
+            </Button>
+          </div>
+        </div>
+        <div
+          className="modal-container"
+        >
+          <Modal
+            isVisible={false}
+            title="Enter item Details"
+          />
+        </div>
+      </TodoView>
+    </Todo>
+  </Connect(Todo)>
+</Provider>
+`;

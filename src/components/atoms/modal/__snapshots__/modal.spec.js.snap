@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component should render the component 1`] = `
+<Modal
+  isVisible={true}
+  title="Test Title"
+>
+  <div
+    className="modal"
+    id="modal"
+  >
+    <h4>
+      Test Title
+    </h4>
+    <div
+      className="content"
+    >
+      <div />
+    </div>
+  </div>
+</Modal>
+`;

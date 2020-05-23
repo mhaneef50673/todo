@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component should render the component 1`] = `
+<Button
+  action={[Function]}
+  buttonText="Add Item"
+  extraClass="extraClass"
+>
+  <button
+    className="extraClass"
+    type="button"
+  >
+    Add Item
+  </button>
+</Button>
+`;

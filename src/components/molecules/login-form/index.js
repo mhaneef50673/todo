@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './login-form.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey, faSpinner, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -52,12 +53,14 @@ export default class LoginForm extends React.Component {
             }
             <div className="input-container">
               <span className="username">
+                { /* eslint-disable-next-line */}
                 <a><FontAwesomeIcon className="fa-user" icon={faUser} /></a>
               </span>
               <input name="userid" value={userid} onChange={e => this.onInputChange(e, 'userid')} required className="input-field" placeholder="User Id" />
             </div>
             <div className="input-container">
               <span className="username">
+                { /* eslint-disable-next-line */}
                 <a><FontAwesomeIcon className="fa-key" icon={faKey} /></a>
               </span>
               <input name="password" type="password" value={password} onChange={e => this.onInputChange(e, 'password')} required className="input-field" placeholder="Password" />
@@ -80,4 +83,14 @@ export default class LoginForm extends React.Component {
       </div>
     );
   }
+};
+
+LoginForm.propTypes = {
+  error: PropTypes.bool,
+  isAuthenticating: PropTypes.bool,
+};
+
+LoginForm.defaultProps = {
+  error: false,
+  isAuthenticating: false,
 }
