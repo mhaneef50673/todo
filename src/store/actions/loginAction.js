@@ -1,5 +1,6 @@
 import { createAction } from './index';
 import { LOGIN, LOGIN_ERROR, IS_AUTHENTICATING, LOGOUT, LOCAL_STORAGE_KEY } from '../../constants';
+import { getLoginToken } from '../../core/api';
 
 export function login(userid, password, history) {
   return (dispatch) => {
@@ -10,10 +11,11 @@ export function login(userid, password, history) {
       body: JSON.stringify({ email: userid, password })
     };
 
-    fetch('https://reqres.in/api/login', requestOptions)
+    /*fetch('https://reqres.in/api/login', requestOptions)
     .then((response) => {
       return response.json();
-    })
+    })*/
+    getLoginToken(requestOptions)
     .then((results) => {
       if(results && results.token) {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(results.token));

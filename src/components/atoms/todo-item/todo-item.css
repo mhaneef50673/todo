@@ -12,15 +12,23 @@
 }
 
 .pending {
-  background-color: lightsalmon;
+  background-color: #fee5c9;
 }
 
 .completed {
-  background-color: darkseagreen
+  background-color: #dceab7;
 }
 
-.text {
+.completed .text {
   padding-bottom: 10px;
+  color: #47813a;
+  font-weight: 500;
+}
+
+.pending .text {
+  padding-bottom: 10px;
+  color: #ae7756;
+  font-weight: 500;
 }
 
 .todo-item::after {
