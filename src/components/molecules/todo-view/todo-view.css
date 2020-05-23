@@ -26,9 +26,9 @@ h1 {
 }
 
 .modal-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: absolute;
+    top: 34%;
+    left: 40%;
 }
 
 .toggle-button-cancel {
