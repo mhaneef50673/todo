@@ -4,7 +4,7 @@
 
 This project has been deployed in heroku cloud.
 
-Click on this [link](https://haneef-todo.herokuapp.com/) to access the project in heroku cloud. 
+Click on this [https://haneef-todo.herokuapp.com/](https://haneef-todo.herokuapp.com/) to access the project in heroku cloud. 
 
 ## Project Structure
 
