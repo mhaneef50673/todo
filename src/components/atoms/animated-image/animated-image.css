@@ -1,0 +1,12 @@
+.image-container {
+  animation: grow 2s;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

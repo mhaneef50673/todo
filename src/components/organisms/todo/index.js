@@ -5,6 +5,7 @@ import Button from '../../atoms/button';
 import TodoView from '../../molecules/todo-view';
 import { toggleTodoStatus, addTodoItem } from '../../../store/actions/todoActions';
 import { logout } from '../../../store/actions/loginAction';
+import { isAuthenticated } from '../../../utils';
 
 const mapStateToProps = state => ({
   todos: state.todoReducer.todos || [],
@@ -24,10 +25,10 @@ class Todo extends React.Component {
 
   render() {
     const { todos, addTodoItem } = this.props;
-    const token = localStorage.getItem('token');
-    if (!token) {
+    if(!isAuthenticated()) {
       return <Redirect to="/login" />;
     }
+
     return (
       <React.Fragment>
         <Button buttonText="logout" clickHandler={this.handleLogout} />

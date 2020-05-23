@@ -1,0 +1,20 @@
+.app-logo-container {
+  margin-top: 100px;
+  position: absolute;  
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.app-logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+.progress-bar-container {
+  margin-top: 170px;
+  position: absolute;  
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,18 @@
+.progress-bar {
+  position: relative;
+  height: 1.5px;
+  width: 200px;
+  border-radius: 50px;
+  margin: 0 75px;
+}
+
+.filler {
+  background: #e92227;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+
+.loadingText {
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 import { createAction } from './index';
-import { LOGIN, LOGIN_ERROR, IS_AUTHENTICATING, LOGOUT } from '../../constants';
+import { LOGIN, LOGIN_ERROR, IS_AUTHENTICATING, LOGOUT, LOCAL_STORAGE_KEY } from '../../constants';
 
 export function login(userid, password, history) {
   return (dispatch) => {
@@ -16,7 +16,7 @@ export function login(userid, password, history) {
     })
     .then((results) => {
       if(results && results.token) {
-        localStorage.setItem('token', JSON.stringify(results.token));
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(results.token));
         dispatch(createAction(LOGIN, {
           token: results.token,
         }))
@@ -31,6 +31,6 @@ export function login(userid, password, history) {
 export function logout() {
   return (dispatch) => {
     dispatch(createAction(LOGOUT, {}));
-    localStorage.removeItem('token');
+    localStorage.removeItem(LOCAL_STORAGE_KEY);
   }
 }

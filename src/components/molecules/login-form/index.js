@@ -19,26 +19,6 @@ export default class LoginForm extends React.Component {
     event.preventDefault();
 
     login(userid, password, history);
-
-    /*const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: userid, password })
-    };
-
-    fetch('https://reqres.in/api/login', requestOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((results) => {
-      if(results && results.token) {
-        history.push('/home');
-      } else {
-        this.setState({
-          isError: true,
-        })
-      }
-    })*/
   }
 
   onInputChange = (e, inputName) => {
@@ -69,16 +49,16 @@ export default class LoginForm extends React.Component {
                   </div>
                 )
               }
-              <span class="fa-stack fa-xs username">
-                <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-                <i class="fa fa-user fa-stack-1x"></i>
+              <span className="fa-stack fa-xs username">
+                <i className="fa fa-circle fa-stack-2x icon-background1"></i>
+                <i className="fa fa-user fa-stack-1x"></i>
               </span>
               <input name="userid" value={userid} onChange={e => this.onInputChange(e, 'userid')} required className="input-field" placeholder="User Id" />
             </div>
             <div className="input-container">
-              <span class="fa-stack fa-xs username">
-                <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-                <i class="fa fa-key fa-stack-1x" data-fa-transform="rotate-45"></i>
+              <span className="fa-stack fa-xs username">
+                <i className="fa fa-circle fa-stack-2x icon-background1"></i>
+                <i className="fa fa-key fa-stack-1x" data-fa-transform="rotate-45"></i>
               </span>
               <input name="password" type="password" value={password} onChange={e => this.onInputChange(e, 'password')} required className="input-field" placeholder="Password" />
             </div>
@@ -86,7 +66,7 @@ export default class LoginForm extends React.Component {
           <div className="center">
             {
               isAuthenticating ? (
-                <i class="fas fa-spinner"></i>
+                <i className="fas fa-spinner"></i>
               ) : (
                 <i className="fas fa-arrow-right"></i>
               )
