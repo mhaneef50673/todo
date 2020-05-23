@@ -32,7 +32,7 @@ const LoaderView = () => {
   return (
     <div>
       <div className="app-logo-container">
-        <AnimatedImage imageUrl={appLogo} extraClass="app-logo" />
+        <AnimatedImage imageUrl={appLogo} extraClass="app-logo" shouldUseRippleEffect showRippleEffect={percentage > 70} />
       </div>
       <div className="progress-bar-container">
         <ProgressBar percentage={percentage} />

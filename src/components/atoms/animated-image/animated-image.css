@@ -10,3 +10,25 @@
     transform: scale(1);
   }
 }
+
+.ripple {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: grey;
+  transform: scale(0);
+  position: absolute;  
+  left: -60%;
+  opacity: 1;
+}
+
+.rippleEffect {
+    animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
