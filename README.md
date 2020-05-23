@@ -5,6 +5,20 @@
 
 This project is using [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
+## Mock login rest api
+
+This project is using [Reqres](https://reqres.in/api/login) api for login. Please use the below credentials for login page(intendedly hardcoded in code for users to access),
+
+    userid: 'eve.holt@reqres.in'
+    password: 'cityslicka'
+
+## Project tested in following browsers:
+
+
+    IE11
+    Google Chrome
+    Mozilla firefox
+
 ## How to run this project
 
 In the project directory, you can run:
