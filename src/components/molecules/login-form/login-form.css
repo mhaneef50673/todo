@@ -18,7 +18,7 @@
 .input-field {
   width: 96%;
   margin: 5px;
-  text-indent: 50px;
+  text-indent: 40px;
   height: 35px;
   border-radius: 3px;
   border: 1px solid lightgrey;
@@ -90,17 +90,18 @@
 
 .username {
   position:absolute;
-  bottom:13px;
-  left:15px;
+  top:12px;
+  left:14px;
 }
 
 .icon-background1 {
   color: #e92227;
+  width: 10px;
+  height: 10px;
 }
 
 .fa-key, .fa-user {
   font-size: 12px;
-  color: white;
 }
 
 .fa-key {
@@ -124,4 +125,23 @@
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(359deg); }
+}
+
+.input-container a{
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #e92227;
+  border-radius: 20px;
+} 
+.input-container a svg{
+  padding: 6px 7px;
+  color: white
+}
+.center .centered-icon {
+  position: absolute;
+  top: 32%;
+  right: 15%;
+  color: white;
+  font-size: 12px;
 }

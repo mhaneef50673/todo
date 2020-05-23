@@ -18,6 +18,7 @@ const loginReducer = (state, action) => {
       return Object.assign({}, state, {
         token: '',
         error: true,
+        isAuthenticating: false,
       });
     case IS_AUTHENTICATING:
       return Object.assign({}, state, {
